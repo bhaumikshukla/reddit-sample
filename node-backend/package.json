@@ -1,0 +1,24 @@
+{
+  "name": "reddit-sample",
+  "version": "1.0.0",
+  "description": "An example of reddit web application",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhaumikshukla/reddit-sample.git"
+  },
+  "author": "Bhaumik Shukla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhaumikshukla/reddit-sample/issues"
+  },
+  "homepage": "https://github.com/bhaumikshukla/reddit-sample#readme"
+}
