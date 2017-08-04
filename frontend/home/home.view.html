@@ -1,0 +1,36 @@
+﻿<!--
+Home page view, describes list of topics and provide buttons for actions like Upvote, downvote,
+and submit new topic
+-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div style="position: fixed; top: 0; right: 10px">
+<font size="2" style="align-content: right">Welcome {{username}}.</font>
+</div>
+<br>
+<h2> Reddit Sample </h2>
+
+<ul class="w3-ul w3-card-4">
+    <li ng-repeat="obj in vm.listTopics" class="w3-padding-16">
+    <table><tr><td>
+    <table style="margin:0px;" ><tr><td><a><img src="/img/up_arrow.png" class="w3-left w3-circle w3-margin-right" style="width:25px" ng-click="vm.upvote(obj)"></a></td></tr>
+    <tr><td>{{obj.votes}}</td></tr>
+
+    <tr><td><a><img src="/img/down_arrow.png" class="w3-left w3-circle w3-margin-right" style="width:25px" ng-click="vm.downvote(obj)"></a></td></tr>
+    </table>
+    </td><td>
+    <span class="w3-large">{{obj.topic}} </span>
+    <br><span><font size=1>by: {{obj.user}}</font></span></td></tr></table>
+    
+
+    <!--
+        <a ng-click="vm.upvote(obj)"> Up vote </a> {{obj.votes}} <a ng-click="vm.downvote(obj)" > Down vote </a> {{obj.topic}} -->
+    </li>
+</ul>
+<form name="form" ng-submit="vm.submitNewTopic()" role="form">
+<br>
+Submit new topic here:
+<input type="text" name="newtopic" id="newtopic" class="form-control" ng-model="vm.newtopic" required maxlength="255" />
+	<div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+</form>
