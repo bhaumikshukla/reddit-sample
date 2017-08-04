@@ -53,12 +53,11 @@ module.exports = {
     });
 
     dicx = []
-    //TODO: only 20 objs
-    sortable.forEach(function(value){
-      //console.log(value[0])
-      dicx.push({"topic":value[0],"votes":value[1], "user": value[2]})
+    // returns first 20 objects
+    for(i = 0; i < sortable.length && i < 20; i++) {
+      dicx.push({"topic":sortable[i][0],"votes":sortable[i][1], "user": sortable[i][2]})
+    }
 
-    });
     return dicx
   }
 };
