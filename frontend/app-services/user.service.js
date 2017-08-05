@@ -12,6 +12,7 @@
         service.GetAll = GetAll;
         service.Submitvote = Submitvote
         service.Submittopic = Submittopic
+        service.baseURL = ""
 
         return service;
 
@@ -20,7 +21,7 @@
         */
         function GetAll() {
             // it raises and error if fail
-            return $http.get('/api/').then(handleSuccess, handleError('Error getting all topics data'));
+            return $http.get(service.baseURL + '/api/').then(handleSuccess, handleError('Error getting all topics data'));
         }
 
         /*
@@ -28,7 +29,7 @@
         */
         function Submitvote(data) {
             // it raises and error if fail
-            return $http.post('/api/vote', data).then(handleSuccess, handleError('Error while submitting vote'));
+            return $http.post(service.baseURL + '/api/vote', data).then(handleSuccess, handleError('Error while submitting vote'));
         }
 
         /*
@@ -36,7 +37,7 @@
         */
         function Submittopic(data) {
             // it raises and error if fail
-            return $http.post('/api/topic', data).then(handleSuccess, handleError('Error creating user'));
+            return $http.post(service.baseURL + '/api/topic', data).then(handleSuccess, handleError('Error creating user'));
         }
 
         // private functions

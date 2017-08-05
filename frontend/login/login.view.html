@@ -1,5 +1,5 @@
 ﻿<div class="col-md-6 col-md-offset-3">
-    <h2>Get-in</h2>
+    <h2><p id="heading">Get-in</p></h2>
     <form name="form" ng-submit="vm.login()" role="form">
         <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
             <label for="username">Username</label>
@@ -7,7 +7,16 @@
             <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" id="loginbtn" class="btn btn-primary">Login</button>
         </div>
     </form>
+    <br><br>
+    Demo features:
+    <ul>
+    <li>Getting in with username</li>
+    <li>Home page with top 20 topics</li>
+    <li>Upvote/Downvote on any topic</li>
+    <li>Submit new topics (current user can't vote own topics)</li>
+    <li>Logout</li>
+    </ul>
 </div>
