@@ -5,9 +5,9 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['UserService', '$rootScope','$scope'];
+    HomeController.$inject = ['UserService', '$rootScope','$scope','$location'];
 
-    function HomeController(UserService, $rootScope, $scope) {
+    function HomeController(UserService, $rootScope, $scope, $location) {
         var vm = this;
 
         vm.user = null;
@@ -17,6 +17,7 @@
         vm.upvote = upvote;
         vm.downvote = downvote
         vm.submitNewTopic = submitNewTopic
+        vm.logout = logout
 
         // storing username, to populate on page and will be sent as meta
         $scope.username = $rootScope.globals.currentUser.username
@@ -113,7 +114,7 @@
         function downvote(obj) {
             // restricting user to vote own topics
             if (!amIableToUpvote(obj)) {
-                console.log("upvote: User can not up/down vote own topics")
+                console.log("Downvote: User can not up/down vote own topics")
                 return;
             }
 
@@ -132,6 +133,15 @@
                         obj.votes = obj.votes - 1
                     }
                 });
+        }
+
+        /*
+        This method logs out the current user,
+        */
+        function logout() {
+            console.log("Logout")
+            $rootScope.globals.currentUser = null
+            location.reload()
         }
     }
 
