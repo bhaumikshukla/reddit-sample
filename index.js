@@ -10,9 +10,9 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// making resources under 'frontend' dir visible. 
+// Setting path for HTML and other resources.
 var frontend = path.join(__dirname, 'frontend');
-
-
 app.use(express.static(frontend));
 
 // provided routes in routes.js, all the APIs definitions are there

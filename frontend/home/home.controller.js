@@ -75,8 +75,10 @@
         function amIableToUpvote(obj) {
             
             if(obj.user == $scope.username) {
+                // failure, as current user can not provide vote to own topics
                 return false;
             }
+            // yes, here the user is able to vote,
             return true;
         }
 

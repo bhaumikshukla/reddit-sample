@@ -3,6 +3,7 @@ This module provides the topics manipulations and counting of votes.
 Provides setter getter methods for topics, just to make these utilities separate.
 */
 
+// Default values in store for demo purpose, as topics, total votes for each and posted by user's name
 var dic = {
   "I did not agree to this bed switch.-Dog" : {
     "votes":2,
@@ -47,45 +48,60 @@ var dic = {
 };
 
 module.exports = {
+  /// getting username from topic
   getUserfromtopic: function (key) {
-    // whatever
+    // returning value of key user for the topic
     return dic[key]["user"]
   },
+  // getting complete obj including username and votes from topic name
   getObjfromtopic: function(key) {
     return dic[key]
   },
+  // getting current votes count from the topic
   getVotesfromtopic: function (key) {
     return dic[key]["votes"]
   },
+
+  // setting votes value to the topic
   setVotes: function (key,value) {
     dic[key]["votes"] = value
   },
+
+  //setting complete object as value to any topic key
   setObj: function(key,value) {
     return dic[key] = value
   },
+  //setting username to any topic
   setUser: function (key,value) {
     // whatever
     dic[key]["user"] = value
   },
+  //getting all the data from the store, complete runtime dict
   getalldata: function () {
     return dic
   },
+
+  //getting all the top 20 topics and it's data 
   getalldata_sortedby_votes: function () {
 
     var sortable = [];
     for (var item in dic) {
         sortable.push([item, dic[item].votes, dic[item].user]);
     }
+    // sorting, descending order 
+    // (TODO: It will be better if the sort process happens while just after any new topic comes & set to sorted list)
     sortable.sort(function(a, b) {
         return b[1] - a[1];
     });
 
+    // preparing dict for 20 obj
     dicx = []
-    // returns first 20 objects
+    // pushing data for first 20 objects
     for(i = 0; i < sortable.length && i < 20; i++) {
       dicx.push({"topic":sortable[i][0],"votes":sortable[i][1], "user": sortable[i][2]})
     }
 
+    // returning top 20 topics data
     return dicx
   }
 };
