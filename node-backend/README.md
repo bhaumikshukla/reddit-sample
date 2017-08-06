@@ -44,13 +44,13 @@ Backend has been designed to serve the data through REST over HTTP.
   {"status":"success","message":"topic has been stored"}
   ```
   
-  * API to submit new t (Upvote or Downvote)
+* API to submit votes (Upvote or Downvote)
   ```
   Method: POST
   Endpoint: /api/vote
   Payload (JSON):
   {
-  	"topic" : "<<String:: Topic>>",
+    "topic" : "<<String:: Topic>>",
     "vote" : "UP<<String::UP or DOWN>>"
   }
 
