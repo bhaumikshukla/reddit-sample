@@ -3,7 +3,7 @@ This is a testing file, end-to-end testing all the features from the end user pe
 */
 
 // this test checks the first login page
-var baseURL = "http://localhost/"
+var baseURL = "http://localhost:3000"
 describe('angularjs loginpage', function() {
   it('open login page', function() {
     // going to the URL

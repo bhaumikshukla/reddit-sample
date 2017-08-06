@@ -5,11 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "protractor": "^5.1.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "protractor tests/conf.js",
     "start": "node index.js"
   },
   "repository": {
