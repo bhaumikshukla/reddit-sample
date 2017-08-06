@@ -14,8 +14,9 @@ npm start
 ```
 That's it! Project is running.
 Go to URL: http://localhost:3000
-![Image of architecture](http://bshukla.com/images/reddit-sample-UI-1.png)
-![Image of architecture](http://bshukla.com/images/reddit-sample-UI2.png)
+![Image of login page](http://bshukla.com/images/reddit-sample-UI-1.png)
+![Image of home page top](http://bshukla.com/images/reddit-sample-UI2.png)
+![Image of home page bottom](http://bshukla.com/images/reddit-sample-UI3.png)
 
 ## How to deploy on heroku
 Complete guidelines provided here: https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
