@@ -47,10 +47,14 @@ Okay, your application is deployed.
 
 ## Components
 ### Frontend
-This portion is
+This portion is responsible to serve front end developed using AngularJS
+Documentation of frontend can be found in /frontend dir as README.
+https://github.com/bhaumikshukla/reddit-sample/tree/master/frontend#frontend
 ### Backend
-
-
-#### Documentation of APIs
+Backend is responsible to serve through REST APIs, developed using NodeJS. Complete documentation of details & APIs can be found in /node-backend directory as README.
+https://github.com/bhaumikshukla/reddit-sample/tree/master/node-backend#backend
+### Test
+Documentation of tests can be found under/tests directory as README.
+https://github.com/bhaumikshukla/reddit-sample/tree/master/tests#testing-the-project
 
 
