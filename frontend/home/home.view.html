@@ -14,13 +14,13 @@ and submit new topic
     <li ng-repeat="obj in vm.listTopics" class="w3-padding-16">
     <table><tr><td>
     <table style="margin:0px;" ><tr><td>
-    <a><img src="/img/up_arrow.png" class="w3-left w3-circle w3-margin-right" style="width:25px" ng-click="vm.upvote(obj)" id={{obj.topic}}_upvote></a>
+    <a><img src="/app-content/up_arrow.png" class="w3-left w3-circle w3-margin-right" style="width:25px" ng-click="vm.upvote(obj)" id={{obj.topic}}_upvote></a>
     </td></tr>
 
     <tr><td><p id={{obj.topic}}_votes>{{obj.votes}}</p></td></tr>
 
     <tr><td>
-    <a><img src="/img/down_arrow.png" class="w3-left w3-circle w3-margin-right" style="width:25px" ng-click="vm.downvote(obj)" id={{obj.topic}}_downvote></a>
+    <a><img src="/app-content/down_arrow.png" class="w3-left w3-circle w3-margin-right" style="width:25px" ng-click="vm.downvote(obj)" id={{obj.topic}}_downvote></a>
     </td></tr>
     </table>
     </td><td>
